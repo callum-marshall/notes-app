@@ -1,16 +1,3 @@
-// function textStoresTheText() {
-//   var note = new Note("noteText");
-//   assert.isEqual(note.text, "noteText");
-// };
-//
-// function getTextReturnsTheText() {
-//   var note = new Note("noteText");
-//   assert.isEqual(note.getText(), "noteText");
-// };
-//
-// textStoresTheText();
-// getTextReturnsTheText();
-
 function listIsAnArray() {
   var noteList = new NoteList();
   assert.isAnArray(noteList.list);
@@ -21,5 +8,19 @@ function listStartsEmpty() {
   assert.isEmpty(noteList.list);
 };
 
+function getListReturnsList() {
+  var noteList = new NoteList();
+  noteList.list = "teststring"
+  assert.isEqual(noteList.getList(), "teststring");
+};
+
+function addNoteCreatesANoteAndStoresIt() {
+  var noteList = new NoteList();
+  noteList.addNote("teststring")
+  assert.isEqual(noteList.list[0].getText(), "teststring");
+};
+
 listIsAnArray();
-listStartsEmpty(); 
+listStartsEmpty();
+getListReturnsList();
+addNoteCreatesANoteAndStoresIt();

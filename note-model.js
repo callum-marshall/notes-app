@@ -7,5 +7,6 @@
     return this.text
   };
 
+
   exports.Note = Note;
 })(this);
