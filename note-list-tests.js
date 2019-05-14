@@ -20,7 +20,15 @@ function addNoteCreatesANoteAndStoresIt() {
   assert.isEqual(noteList.list[0].getText(), "teststring");
 };
 
+function getHTMLCreatesHTMLString() {
+  var notelist = new NoteList()
+  notelist.addNote("teststring")
+  var noteListView = new NoteListView(notelist)
+  assert.isEqual(noteListView.getHTML(), "<ul><li><div>teststring</div></li></ul>")
+};
+
 listIsAnArray();
 listStartsEmpty();
 getListReturnsList();
 addNoteCreatesANoteAndStoresIt();
+getHTMLCreatesHTMLString();
