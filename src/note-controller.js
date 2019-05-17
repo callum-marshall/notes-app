@@ -9,11 +9,10 @@
     displayNote: function() {
       document.getElementById('app').innerHTML = this.noteListView.getHTML(this.noteList);
     }
-  }
+  };
 
   exports.NoteController = NoteController;
 })(this);
 
-
-// var element = document.getElementById('app').innerHTML = 'HI';
-// console.log(element)
+var display = new NoteController();
+console.log(display.displayNote());

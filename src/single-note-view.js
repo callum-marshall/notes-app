@@ -1,11 +1,11 @@
 (function(exports) {
   function SingleNoteView(noteModel) {
     this.noteModel = noteModel
-};
+  };
 
-SingleNoteView.prototype.show = function() {
-  return `<div> ${this.noteModel.getText()} </div>`
-};
+  SingleNoteView.prototype.show = function() {
+    return `<div> ${this.noteModel.getText()} </div>`
+  };
 
   exports.SingleNoteView = SingleNoteView;
 })(this);
