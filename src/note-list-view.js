@@ -1,10 +1,10 @@
 (function(exports) {
-  function NoteListView(notelist) {
-    NOTELIST = notelist
-  }
+  function NoteListView() {};
+
   var htmlString = ""
-  NoteListView.prototype.getHTML = function() {
-    NOTELIST.getList().map(function(note) {
+  NoteListView.prototype.getHTML = function(noteListModel) {
+    noteListModel.getList()
+    .map(function(note) {
       htmlString = htmlString + `<li><div>${note.getText()}</div></li>`
     });
     return "<ul>" + htmlString + "</ul>"
