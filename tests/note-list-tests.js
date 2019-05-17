@@ -24,6 +24,13 @@ function addNoteCreatesANoteAndStoresIt() {
   console.log("addNoteCreatesANoteAndStoresIt test passed!");
 };
 
+function addNoteCreatesANoteAndStoresIt() {
+  var noteList = new NoteList();
+  noteList.addNote("teststring")
+  assert.isEqual(noteList.list[0].getText(), "teststring");
+  console.log("addNoteCreatesANoteAndStoresIt test passed!");
+};
+
 listIsAnArray();
 listStartsEmpty();
 getListReturnsList();
